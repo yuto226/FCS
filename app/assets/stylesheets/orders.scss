@@ -1,0 +1,15 @@
+// Place all the styles related to the orders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#order_index #orders{
+  float: left;
+  margin-left: 5px;
+}
+ #order_index .page_nate_area{
+   clear: left;
+   text-align: center;
+ }
+#order_index .form_area{
+  text-align: right;
+  clear: left;
+}
