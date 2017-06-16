@@ -1,10 +1,26 @@
 // Place all the styles related to the orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#contents{
+  //background-color: blue;
+  height: 330px;
+}
+
+#contents p{
+  text-align: center;
+  margin: 10%;
+  font-size: 40px;
+}
+
 #order_index #orders{
   float: left;
   margin-left: 5px;
 }
+
+#order_index #orders td{
+  //padding-right: 10px;
+}
+
  #order_index .page_nate_area{
    clear: left;
    text-align: center;

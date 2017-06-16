@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   def index
-    @order = OrderStatus.page(params[:page])
+    @order = OrderStatus.where(order_status:'false').page(params[:page])
     @order_status = OrderStatus.new
   end
 
@@ -9,8 +9,7 @@ class OrdersController < ApplicationController
     ids = params[:order_status][:id]
     @order_comp = OrderStatus.where(id:ids)
     @order_comp.update_all({ :order_status => 'true' })
-    redirect_to 'orders#index'
-
+    redirect_to root_path,notice:"#{ids.length}個の注文を完了しました。"
   end
 
   def complete_index

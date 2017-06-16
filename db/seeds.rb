@@ -9,6 +9,6 @@ for i in 1..20 do
 Product.create(id:i,name:"ニンジンスープ",price:120+i,category:'',option:'美味しいです。')
 end
 for i in 1..20 do
-OrderStatus.create(id:i,order_status:"true",amount:i,product_id:1)
+OrderStatus.create(id:i,order_status:"false",amount:i,product_id:1)
 end
 #TableNumber.create(or)

@@ -1,7 +1,12 @@
 <div id = "main">
 <div id = "order_index">
+  <p><%= flash[:notice]%></p>
   <div style="text-align:center;"><i><%= Date.today%></i></div>
-  <%= form_for @order_status , :url => {:action => 'complete'} do |f|%>
+  <%= form_for @order_status, :url => {:action => 'complete'} do |f|%>
+  <div id="contents">
+    <% if @order.blank?%>
+    <p>まだ注文がありません!!</p>
+    <% else%>
   <% @order.each do |order|%>
   <div id = "orders">
   <table class = "table table-bordered">
@@ -29,6 +34,9 @@
   </table>
   </div>
   <%end%>
+  <%end%>
+</div>
+  <!--<div><%= button_to "完了済み一覧を表示する。",method:'get',action:'complete_index'%></div>-->
   <div class = "form_area"><%= f.button "チェックしたものを完了する。"%></div>
 <div class = "page_nate_area"><%= paginate @order %></div>
 <%end%>
