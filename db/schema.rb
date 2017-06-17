@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170604121202) do
+ActiveRecord::Schema.define(version: 20170617063824) do
 
   create_table "order_statuses", force: :cascade do |t|
     t.string   "order_status"
     t.integer  "amount"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.integer  "product_id"
+    t.integer  "table_number_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -30,10 +31,9 @@ ActiveRecord::Schema.define(version: 20170604121202) do
   end
 
   create_table "table_numbers", force: :cascade do |t|
-    t.integer  "order_status_id"
     t.integer  "table_number"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end

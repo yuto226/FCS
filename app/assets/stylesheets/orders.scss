@@ -16,16 +16,26 @@
   float: left;
   margin-left: 5px;
 }
-
-#order_index #orders td{
-  //padding-right: 10px;
+#order_index #orders table{
+background-color: white;
 }
 
  #order_index .page_nate_area{
+   //width:150px;
+  margin-left: auto;
+  margin-right: auto;
    clear: left;
    text-align: center;
+   text-shadow: 2px 2px 0px #000;
+   font-size: 25px;
  }
 #order_index .form_area{
   text-align: right;
   clear: left;
+  float: right;
+}
+#order_index .switch{
+  position: absolute;
+  top:400px;
+  left:300px;
 }

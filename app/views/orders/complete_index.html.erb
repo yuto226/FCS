@@ -1,9 +1,11 @@
+<div id = "main">
+<div id="order_index">
+  <div id = 'day_zone'><i><%= Date.today%></i></div>
 <% @order.each do |order|%>
 <div id = "orders">
 <table class = "table table-bordered">
 <tbody>
   <tr>
-    <td rowspan="2"><%= f.check_box 'order_status', {}, true, false %></td>
     <td colspan="2">テーブル番号:</td>
   </tr>
   <tr>
@@ -24,6 +26,8 @@
   </tbody>
 </table>
 </div>
-<%end%><%= f.button "チェックしたものを完了する。"%>
-<div class = "page_nate_area"><%= paginate @order %></div>
 <%end%>
+<div class="switch"><%= button_to "注文一覧へ戻る", {action: :index}, {method: :get}%></div>
+<div class = "page_nate_area"><%= paginate @order %></div>
+</div>
+</div>

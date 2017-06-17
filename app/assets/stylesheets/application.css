@@ -14,12 +14,28 @@
  *= require_tree .
  *= require_self
  */
+body{
+  background-image: url(/images/background1.png);
+  /* 画像を常に天地左右の中央に配置 */
+   background-position: center center;
 
+   /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+   background-attachment: fixed;
+
+   /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+   //background-size: cover;
+
+   /* 背景画像が読み込まれる前に表示される背景のカラー */
+}
 #main{
   //background-color: red;
   width: 850px;
   margin-top: 3%;
   margin-left: 20%;
   margin-right: 20%;
-
+}
+#main #day_zone{
+  text-align: center;
+  font-size: 20px;
+  color: #3300CC;
 }

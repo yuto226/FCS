@@ -1,7 +1,7 @@
 <div id = "main">
 <div id = "order_index">
   <p><%= flash[:notice]%></p>
-  <div style="text-align:center;"><i><%= Date.today%></i></div>
+  <div id = 'day_zone'><i><%= Date.today%></i></div>
   <%= form_for @order_status, :url => {:action => 'complete'} do |f|%>
   <div id="contents">
     <% if @order.blank?%>
@@ -13,7 +13,7 @@
   <tbody>
     <tr>
       <td rowspan="2"><%= f.check_box 'id', {multiple: true}, order.id, false %></td>
-      <td colspan="2">テーブル番号:</td>
+      <td colspan="2">テーブル番号:<%= order.table_number.table_number%></td>
     </tr>
     <tr>
       <td>
@@ -36,10 +36,10 @@
   <%end%>
   <%end%>
 </div>
-  <!--<div><%= button_to "完了済み一覧を表示する。",method:'get',action:'complete_index'%></div>-->
   <div class = "form_area"><%= f.button "チェックしたものを完了する。"%></div>
-<div class = "page_nate_area"><%= paginate @order %></div>
 <%end%>
+<%= button_to "完了済み一覧を表示する。",{action:'complete_index'},{method: :get}%>
+<div class = "page_nate_area"><%= paginate @order %></div>
 </div>
 <!--end of order_index-->
 </div>
