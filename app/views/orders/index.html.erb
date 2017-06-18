@@ -1,7 +1,9 @@
 <div id = "main">
 <div id = "order_index">
   <p><%= flash[:notice]%></p>
-  <div id = 'day_zone'><i><%= Date.today%></i></div>
+  <div id = 'day_zone'><i><%= Date.today%></i>
+    <%= button_to "閉店時切替",{controller:'satistics',action:'index'},{method: :get}%>
+  </div>
   <%= form_for @order_status, :url => {:action => 'complete'} do |f|%>
   <div id="contents">
     <% if @order.blank?%>
