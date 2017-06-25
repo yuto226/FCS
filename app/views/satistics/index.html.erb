@@ -1,14 +1,22 @@
 <div id="main">
   <div id="satistics">
-    <i><%= Date.today%>の注文統計</i>
+    <div id = 'day_zone'><i><%= Date.today%></i>
+      <%= button_to "閉店時切替",{controller:'orders',action:'index'},{method: :get}%>
+    </div>
+    <%= form_tag satistics_path, {:method => 'get'} do%>
+    <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+    <%end%>
     <div id="orders">
     <table class="table table-bordered">
       <tr>
-        <th>商品名</th>
-        <th>注文数</th>
-        <th>単価</th>
-        <th>テーブル番号</th>
-        <th>カテゴリ</th>
+        <th><%= link_to "商品名", sort: "products.name" %></th>
+        <th><%= link_to "注文数", sort: "amount" %></th>
+        <th><%= link_to "単価", sort: "products.price" %></th>
+        <th><%= link_to "テーブル番号", sort: "table_numbers.table_number" %></th>
+        <th><%= link_to "カテゴリ", sort: "products.category" %></th>
       </tr>
       <% @satistics.each do |s| %>
       <tr>

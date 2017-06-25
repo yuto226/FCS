@@ -13,4 +13,9 @@ class OrderStatus < ApplicationRecord
     end
   end
 
+  def self.search(key)
+    logger.debug("\n\n\n\n\n\n\n\n\n\n\n\n\n#{key}")
+    OrderStatus.joins(:product).includes(:product).where(order_status:'true').where(['products.name LIKE ?', "%#{key}%"])
+  end
+
 end

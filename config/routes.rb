@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   get '/orders/complete'
   post '/orders/complete'
   get '/orders/complete_index'
-  get '/satistics/index'
+  get '/satistics/index', as:'satistics'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
