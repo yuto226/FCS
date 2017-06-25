@@ -28,12 +28,13 @@
       </tr>
       <% end %>
       <tr>
-          <td colspan="5" style="text-align:right;">
-            売り上げ総計　<%= OrderStatus.total%>円
+          <td><div class = "page_nate_area"><%= paginate @satistics %></div></td>
+          <td colspan="4" style="text-align:right;font-size:30px;">
+            <b>売り上げ総計　<%= OrderStatus.total%>円</b>
           </td>
       </tr>
     </table>
-    <div class = "page_nate_area"><%= paginate @satistics %></div>
+
   </div>
   <!--end of orders-->
   </div>
