@@ -6,19 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 for i in 1..6 do
-Product.create(id:i,name:"回復薬",price:120+i,category:'',option:"薬草とアオキノコです。\n王道です。")
+Product.create(id:i,name:"回復薬",price:120,category:'',option:"薬草とアオキノコです。\n王道です。")
 end
 
 for i in 7..12 do
-Product.create(id:i,name:"ホットドリンク",price:120+i,category:'',option:"寒さもへっちゃらです。\n辛いです。")
+Product.create(id:i,name:"ホットドリンク",price:100,category:'',option:"寒さもへっちゃらです。\n辛いです。")
 end
 
 for i in 13..18 do
-Product.create(id:i,name:"元気ドリンコ",price:120+i,category:'',option:"スタミナが増えた気がします。\n実は薄味")
+Product.create(id:i,name:"元気ドリンコ",price:150,category:'',option:"スタミナが増えた気がします。\n実は薄味")
 end
 
 for i in 19..24 do
-Product.create(id:i,name:"狂走薬",price:120+i,category:'',option:"たくさん走れます。\n美味しいです。")
+Product.create(id:i,name:"狂走薬",price:200,category:'',option:"たくさん走れます。\n美味しいです。")
 end
 
 for i in 1..24 do
