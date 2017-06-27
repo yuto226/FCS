@@ -6,10 +6,27 @@
   height: 330px;
 }
 
-#contents p{
+#contents span{
   text-align: center;
-  margin: 10%;
+  padding: 5px;
+  margin: 25%;
   font-size: 40px;
+  background-color:#e8e8e8;
+  box-shadow:2px 2px;
+    border:1px solid #000;
+    width:200px;
+    height:50px
+}
+
+#main #order_index p{
+  text-align: center;
+  padding-top: 15px;
+  //color: red;
+  background-color: #e8e8e8;
+  box-shadow:5px 5px;
+    border:1px solid #000;
+    width:200px;
+    height:50px
 }
 
 #order_index #orders{

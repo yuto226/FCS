@@ -7,14 +7,13 @@ class OrderStatus < ApplicationRecord
     unless target.nil?
     total = 0
     target.each do |t|
-      total += t.product.price
+      total += t.product.price * t.amount
     end
       total
     end
   end
 
   def self.search(key)
-    logger.debug("\n\n\n\n\n\n\n\n\n\n\n\n\n#{key}")
     OrderStatus.joins(:product).includes(:product).where(order_status:'true').where(['products.name LIKE ?', "%#{key}%"])
   end
 
