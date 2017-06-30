@@ -1,3 +1,16 @@
+=begin
+  specification
+  name = 注文状況のmodel
+  function = 注文管理全般を担う。
+  note = none
+  date = 2017/6/20
+  author = Yuto Suzuki
+  History = V1.00/V1.00
+  input = 取得したいデータのパラメータ。
+  output = 注文情報に関するオブジェクト。
+  end of specification
+=end
+
 class OrderStatus < ApplicationRecord
   belongs_to :product
   belongs_to :table_number
