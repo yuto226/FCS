@@ -1,3 +1,16 @@
+=begin
+  specification
+  name = application routing
+  function = routingを定義する。
+  note = bundle exc rails db:seedでトリガー。
+  date = 2017/6/20
+  author = Yuto Suzuki
+  History = V1.00/V1.00
+  input = 行先URL
+  output = 行先controler
+  end of specification
+=end
+
 Rails.application.routes.draw do
   get 'satistics/index'
 
