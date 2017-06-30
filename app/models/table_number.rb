@@ -12,5 +12,6 @@
 =end
 
 class TableNumber < ApplicationRecord
+  #多対一のリレーションを定義
   has_many :order_statuses, dependent: :destroy
 end

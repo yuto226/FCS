@@ -15,6 +15,7 @@ class OrderStatus < ApplicationRecord
   belongs_to :product
   belongs_to :table_number
 
+  #合計金額を計算
   def self.total
     target = OrderStatus.where(order_status:'true')
     unless target.nil?
@@ -25,7 +26,7 @@ class OrderStatus < ApplicationRecord
       total
     end
   end
-
+  #モデルの中から検索対象にヒットするものを検索する。
   def self.search(key)
     OrderStatus.joins(:product).includes(:product).where(order_status:'true').where(['products.name LIKE ?', "%#{key}%"])
   end
