@@ -1,7 +1,7 @@
 =begin
   specification
   name = 注文状況のmodel
-  function = 注文管理全般を担う。
+  function = 注文状況を動的に保存。
   note = none
   date = 2017/6/20
   author = Yuto Suzuki

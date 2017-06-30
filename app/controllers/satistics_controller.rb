@@ -1,3 +1,16 @@
+=begin
+  specification
+  name = 注文統計のcontroler
+  function = 注文統計全般を担う。
+  note = none
+  date = 2017/6/20
+  author = Yuto Suzuki
+  History = V1.00/V1.00
+  input = 取得したいデータのパラメータ。
+  output = 注文管理に関するオブジェクトを生成しViewを呼び出す。
+  end of specification
+=end
+
 class SatisticsController < ApplicationController
   VALID_SORT_COLUMNS = %w(products.name amount products.price products.category table_numbers.table_number)
   def index
