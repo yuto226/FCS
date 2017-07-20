@@ -26,6 +26,7 @@ Product.create(id:4,name:"狂走薬",price:200,category:'飲み物(補助薬)',o
 Product.create(id:5,name:"回復薬G",price:200,category:'飲み物(回復)',option:"めっちゃ回復します。\n人気です。")
 Product.create(id:6,name:"こんがり肉",price:300,category:'食べ物(スタミナ)',option:"狩りのおともです。\n上手に焼けました。")
 Product.create(id:7,name:"秘薬",price:580,category:'食べ物(ステータス最大値増)',option:"伝説の秘薬。\nとてもまずい。")
+Product.create(id:99,name:"定義エラー",price:580,category:'定義エラーです。注文状況にエラーが存在している可能性があります。',option:"null")
 
 for i in 1..60 do
 OrderStatus.create(id:i,order_status:"false",amount:rand(1..4),product_id:rand(1..7),table_number_id:rand(1..8))
